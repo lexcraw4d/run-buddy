@@ -50,6 +50,7 @@ header nav ul li a {
 
 }
 
+/*Footer styles start*/
 footer {
     display: flex;
     background: #fce138;
@@ -76,6 +77,8 @@ footer a {
     color: #024e76;
 }
 
+/*End footer style*/
+/*Style all section tags*/
 section {
     padding: 60px;
 }
@@ -325,12 +328,13 @@ section {
     padding: 7px 15px;
     font-size: 16px;
     color: #024e76;
-    width:100%;
+    width: 100%;
     margin-bottom: 15px;
     margin-top: 5px
 }
-.contact-form button{
-    width:100%;
+
+.contact-form button {
+    width: 100%;
     border: none;
     background: #fce138;
     color: #024e76;
@@ -338,6 +342,16 @@ section {
     padding: 15px 0;
     font-size: 16px;
 }
+
+/* UTILITIES */
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
 .flex-row {
     display: flex;
 }
