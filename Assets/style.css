@@ -14,9 +14,17 @@ body {
 header {
     display: flex;
     padding: 20px 35px;
+    background-image: url("../Assets/Images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
     background-color: #39a6b2;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 header h1 {
@@ -51,6 +59,12 @@ header nav ul li a {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+  }
 
 /*Footer styles start*/
 footer {
@@ -93,21 +107,27 @@ section {
     flex-wrap: wrap;
     background-size: cover;
     background-position: center;
-    align-items: flex-start
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 /*Hero style end*/
 .hero-form {
     color: #024e76;
     padding: 20px;
-    background-color: rgba(252,255, 56, 0.8);
+    background-color: rgba(252, 255, 56, 0.8);
     border: solid 3px #024e76;
     width: 40%;
     margin: 3.5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
 }
-
+.hero-form button:hover {
+    background-color: #39a6b2;  
+  }
+  
+  
 .hero-cta {
     width: 35%;
     text-align: right;
@@ -146,7 +166,15 @@ section {
     width: 100%;
     margin-bottom: 15px;
     border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
 }
+/* .form-input:focus {
+    background-color: rgba(255,255,255, 1);
+  } */
+  .form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+  }
 
 .hero-form label {
     margin: 0 5px;
@@ -195,6 +223,9 @@ section {
     align-items: center;
     justify-content: space-between;
 }
+.step:last-child {
+    border-bottom: none;
+  }
 
 .step h3 {
     color: #024e76;
@@ -339,6 +370,7 @@ section {
     margin-bottom: 15px;
     margin-top: 5px;
     border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
 }
 
 .contact-form button {
@@ -351,7 +383,24 @@ section {
     font-size: 16px;
     border-radius: 10px;
 }
-
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
+  }
+/* #contact-name:hover{
+       
+        background-color: rgba(255,255,255, 1);
+        outline: none;
+      
+} */
+.contact-form input, .contact-form textarea {
+    /* add a transparent background here */
+    background-color: rgba(255,255,255, 0.75);
+  }
+.contact-form input:focus, .contact-form textarea:focus{
+    background-color: rgba(255,255,255, 1);
+        outline: none;
+}
 /* UTILITIES */
 .text-left {
     text-align: left;
@@ -371,6 +420,8 @@ section {
     header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
+
     }
 
     header h1 {
@@ -387,6 +438,15 @@ section {
     header nav ul li a {
         font-size: 20px;
     }
+
+    header nav ul li a:hover {
+        background: #fce138;
+        color: #024e76;
+        border-radius: 15px;
+        text-shadow: none;
+      }
+      
+      
 
     footer h2,
     footer div {
@@ -421,58 +481,60 @@ section {
 @media screen and (max-width: 768px) {
 
     section {
-      padding: 30px 15px;
+        padding: 30px 15px;
     }
-  
+
     .step h3 {
-      flex: 1 100%;
-      text-align: center;
+        flex: 1 100%;
+        text-align: center;
     }
-  
+
     .step-info {
-      flex: 2 100%;
-      text-align: center;
-      justify-content: center;
+        flex: 2 100%;
+        text-align: center;
+        justify-content: center;
     }
-  
+
     .step-img {
-      flex: 0 32%;
-      margin-right: 0;
-      margin-top: 15px;
-      margin-bottom: 15px;
+        flex: 0 32%;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
-  
+
     .step-text {
-      flex: 100%;  
+        flex: 100%;
     }
-  
-  }
-  @media screen and (max-width: 575px) {
+
+}
+
+@media screen and (max-width: 575px) {
 
     .hero-form button {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .section-title {
-      width: 95%;
+        width: 95%;
     }
-  
+
     .intro p {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .trainer {
-      flex: 0 100%;
+        flex: 0 100%;
     }
-  
+
     .contact-info {
-      text-align: center;
+        text-align: center;
     }
-  
-    .contact-info > * {
-      flex: 0 100%;
+
+    .contact-info>* {
+        flex: 0 100%;
     }
+
     .contact-form {
         order: 3;
-      }
-  }
+    }
+}
